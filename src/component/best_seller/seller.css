@@ -1,0 +1,113 @@
+.seller {
+    margin: 30px 10px 10px 100px;
+    height: 75rem;
+    /* border: 2px solid black; */
+}
+
+.best_seller {
+    width: 90%;
+    height: 70px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid black; */
+}
+
+.best_seller h2 {
+    text-transform: capitalize;
+    font-size: 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.best_seller a {
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 3px;
+    color: #979a9b;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+
+.best_seller a::after {
+    content: '';
+    display: block;
+    background-color: black;
+    width: 0px;
+    height: 2px;
+    transition: width 0.5s;
+}
+
+.best_seller a:hover {
+
+    color: black;
+}
+
+.best_seller a:hover::after {
+    width: 100%;
+}
+
+.iteam_list {
+    display: grid;
+    position: relative;
+    width: 93%;
+    height: 450px;
+    gap: 15px;
+    grid-template-columns: auto auto auto;
+}
+
+.iteam_list img {
+    width: 390px;
+    height: 400px;
+    transition: all 0.6s;
+}
+
+.iteam_list img:hover {
+    width: 400px;
+    height: 410px;
+    box-shadow: 8px 8px 18px -5px rgba(0, 0, 0, 0.58);
+}
+
+.iteam {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.view_detail {
+    display: none;
+    position: absolute;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 22px;
+    bottom: 40px;
+    left: 13px;
+    width: 400px;
+    height: 50px;
+    background-color: rgba(79, 78, 78, 0.4);
+
+}
+
+.iteam h2 {
+    margin: 15px 0px;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.iteam span {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-size: 18px;
+    color: #979a9b;
+}
+
+.price {
+    text-align: center;
+}
+
+.rupees {
+    color: #979a9b;
+    height: 0.8em;
+    width: 0.8em;
+}

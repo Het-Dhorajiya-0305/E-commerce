@@ -1,0 +1,57 @@
+.container
+{
+    display: flex;
+    width: 93%;
+    height:42rem;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 2px solid black; */
+}
+.center_data
+{
+    color: white;
+    text-transform: capitalize;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    margin-top: 200px;
+    line-height: 85px;
+    
+}
+h2{
+    font-weight: 400;
+    font-size: 40px;
+}
+.container a{
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 15px;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 400;
+    transition: all 0.3s;
+}
+.container a:hover
+{
+    background-color: white;
+    color: black;
+}
+.men_iteam
+{
+    background: url(../assets/men.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 660px;
+    height: 580px;
+}
+.women_iteam
+{
+    background: url(../assets/women.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 660px;
+    height: 580px;
+}
