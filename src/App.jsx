@@ -9,6 +9,8 @@ import Seller from './component/best_seller/Seller';
 import Men_Women from './component/menandwomen/Men_Women';
 import NewArrival from './component/new_arrive/NewArrival';
 import Info from './component/info/Info';
+import Review from './component/customer_review/Review';
+import Footer from './component/footer/Footer';
 
 
 
@@ -33,6 +35,8 @@ function App() {
       <Men_Women></Men_Women>
       <NewArrival></NewArrival>
       <Info></Info>
+      <Review></Review>
+      <Footer></Footer>
     </div>
   )
 }
