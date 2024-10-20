@@ -1,15 +1,15 @@
 .navbar {
     display: flex;
     position: fixed;
-    left: 37px;
+    left: 0px;
     top: 0px;
     z-index: 1000;
-    width: 95%;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     /* border: 2px solid black; */
     height: 85px;
-    background-color: rgb(248, 248, 248);
+    background-color: rgba(248, 248, 248, 0.949);
 }
 
 .title_name

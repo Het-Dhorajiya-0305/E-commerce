@@ -11,6 +11,8 @@ import NewArrival from './component/new_arrive/NewArrival';
 import Info from './component/info/Info';
 import Review from './component/customer_review/Review';
 import Footer from './component/footer/Footer';
+import ContactUs from './component/contact_us/ContactUs';
+import ShopMen from './component/shop_men/ShopMen';
 
 
 
@@ -37,6 +39,8 @@ function App() {
       <Info></Info>
       <Review></Review>
       <Footer></Footer>
+      <ContactUs></ContactUs>
+      <ShopMen></ShopMen>
     </div>
   )
 }
