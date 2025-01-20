@@ -8,7 +8,7 @@ import { FaTwitter } from "react-icons/fa";
 
 function ContactUs() {
     return (
-        <div>
+        <div id='contact_us'>
             <div className='main_box'>
                 <div className="plashoe_content">
                     <h3>plashoe</h3>

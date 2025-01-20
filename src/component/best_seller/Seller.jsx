@@ -1,12 +1,11 @@
 import React from 'react'
 import './seller.css'
-import Home from '../hero/Home'
 import shoes1 from '../assets/shoes1.jpg'
 import shoes2 from '../assets/shoes2.jpg'
 import shoes3 from '../assets/shoes3.jpg'
 import shoes4 from '../assets/shoes4.jpg'
 import shoes5 from '../assets/shoes5.jpg'
-import shoes6 from '../assets/shoes6.jpg'
+import shoes8 from '../assets/shoes8.jpg'
 import { FaIndianRupeeSign } from "react-icons/fa6";
 
 
@@ -14,7 +13,7 @@ function Seller() {
 
 
     return (
-        <div className='seller'>
+        <div className='seller' id='best_seller'>
             <div className='best_seller'>
                 <h2>our best seller</h2>
                 <a href="Home">view all best seller</a>
@@ -77,7 +76,7 @@ function Seller() {
                     </div>
                 </div>
                 <div className="iteam6 iteam">
-                    <img src={shoes6} alt="" />
+                    <img src={shoes8} alt="" />
                     <h2>Men’s Green Running</h2>
                     <div className="price">
 

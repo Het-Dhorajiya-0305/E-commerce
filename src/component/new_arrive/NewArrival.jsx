@@ -6,15 +6,15 @@ import shoes8 from '../assets/shoes8.jpg'
 import shoes9 from '../assets/shoes9.jpg'
 import shoes10 from '../assets/shoes10.jpg'
 import shoes11 from '../assets/shoes11.jpg'
-import shoes12 from '../assets/shoes12.jpg'
+import shoes4 from '../assets/shoes4.jpg'
 import shoes13 from '../assets/shoes13.jpg'
 import shoes14 from '../assets/shoes14.jpg'
-import shoes15 from '../assets/shoes15.jpg'
+import shoes3 from '../assets/shoes3.jpg'
 
 function NewArrival() {
     return (
         <div>
-            <div className='arrival'>
+            <div className='arrival' id='new_arrivals'>
                 <div className='new_arrival'>
                     <h2>new arrivals</h2>
                     <a href="Home">view all best seller</a>
@@ -79,7 +79,7 @@ function NewArrival() {
                         </div>
                     </div>
                     <div className="iteam6 iteam">
-                        <img src={shoes12} alt="" />
+                        <img src={shoes4} alt="" />
                         <h2>Women’s Blue Training</h2>
                         <div className="price">
 
@@ -113,7 +113,7 @@ function NewArrival() {
                         </div>
                     </div>
                     <div className="iteam9 iteam">
-                        <img src={shoes15} alt="" />
+                        <img src={shoes3} alt="" />
                         <h2>Women’s Candy City Run</h2>
                         <div className="price">
 

@@ -2,10 +2,10 @@
 {
     background-color: #f1f1ef;
     position: relative;
-    width: 93%;
+    width: 85%;
     height: 32rem;
-    margin: auto;
-    margin-bottom: 45px;
+    margin:50px auto;
+
 }
 
 .content
@@ -23,7 +23,7 @@
 {
     position: absolute;
     top: 100px;
-    right: 250px;
+    right: 200px;
     border-radius: 50%;
 }
 .logo{

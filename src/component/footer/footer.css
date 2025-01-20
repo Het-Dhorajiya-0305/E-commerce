@@ -5,7 +5,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    width:100%;
+    width:95%;
+    margin:20px auto 0px;
     height: 580px;
     text-align: center;
     display: flex;

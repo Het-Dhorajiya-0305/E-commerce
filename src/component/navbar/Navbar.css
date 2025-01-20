@@ -1,94 +1,194 @@
-.navbar {
+header {
     display: flex;
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    z-index: 1000;
-    width: 100%;
     justify-content: space-between;
     align-items: center;
-    /* border: 2px solid black; */
-    height: 85px;
-    background-color: rgba(248, 248, 248, 0.949);
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    z-index: 1000;
+    padding: 24px 7%;
+    background-color: rgb(236, 236, 236);
 }
 
-.title_name
-{
+.title_name {
     text-transform: uppercase;
-    margin-left: 30px;
-    font-size: 2rem;
+    color: black;
+    font-size: 24px;
+    font-weight: 550;
+    letter-spacing: 5px;
 }
 
-.nav_content {
+.navlist_iteam {
     display: flex;
-    width: 75%;
     justify-content: center;
     align-items: center;
 }
-
-.navlist {
-    width: 70%;
-}
-
-.navlist ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.navlist ul li{
-    list-style: none;
-}
-.navlist ul a
+.navlist_iteam li
 {
     text-decoration: none;
-    display: block;
+    list-style: none;
+}
+.navlist_iteam a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;  
+    height: 30px;
+    font-weight: 500;
     text-align: center;
     text-transform: uppercase;
-    width:100px;
-    padding: 0.5rem;
-    /* border: 2px solid black; */
-    color: #979a9b;
-    font-family: sans-serif;
-    font-size: 0.9rem;
-    font-weight:600;
+    margin: 0px 25px;
+    color: rgb(145, 144, 144);
+    font-size: 15px;
+    transition: color 0.4s;
 }
-.navlist ul a:hover 
-{
+
+.navlist_iteam a:hover {
     color: black;
 }
-.navbar ul a::after {
-    content: '';
+
+/* .navlist_iteam li::after {
     display: block;
-    width: 0;
+    content: '';
+    width: 0px;
     height: 2px;
-    background: black;
-    transition: width .3s;
-}
-
-.navbar ul a:hover::after {
-    width: 100%;
-}
-
-
-.add_to_cart {
-    display: flex;
-    position: relative;
-    margin-right: 30px;
-    margin-top: 10px;
-    width: 30px;
-    height: 35px;
-}
-.add_to_cart span
-{
-    position: absolute;
-    text-align: center;
     background-color: black;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    font-size: 13px;
+    transition: width 0.5s;
+}
+
+.navlist_iteam li:hover::after {
+    width: 100%;
+} */
+
+.navlist_iteam .active{
+    padding: 2px;
+    border-bottom: 2px solid black;
+}
+.menu_btn {
+
+    display: none;
+}
+.add_to_cart
+{
+    position: relative;
+}
+.iteam_count{
+    position: absolute;
+    top: -10px;
+    right: -13px;
+    background-color: black;
     color: white;
-    right: -10px;
-    top: -15px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    font-size: 11px;
+    height: 15px;
+    width: 15px;
+}
+
+@media (max-width:1180px)
+{
+    header{
+        padding: 24px 3%;
+    }
+    #navbar a {
+        margin: 0px 10px;
+    }
+}
+@media (max-width:900px)
+{
+    .menu_btn
+    {
+        display: block;
+    }
+    .navlist_iteam
+    {
+        top: 0px; 
+        position: absolute;
+        flex-direction: column;
+        justify-content:center;
+        align-items: start;
+        background-color: white;
+        width: 100%;
+        height: 750px;
+        transition: all 0.6s;
+        z-index: 5000;
+    }
+    .navlist_iteam a
+    {
+        padding: 50px 0px;
+        font-size: 22px;
+        text-transform: capitalize; 
+        font-weight: 400;
+        text-align: start;
+        border-bottom: 1px solid rgba(168, 165, 165, 0.818);
+        width: 100%;
+
+    }
+    
+    .navlist_iteam a::after{
+        content: none;
+        display: none;
+    }
+    .show
+    {
+        left: 0px;
+    }
+    .hide
+    {
+        left: -150%;
+    }
+    #close_btn
+    {
+        z-index: 6000;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        border: 1px dotted black;
+        padding: 15px;
+    }
+}
+
+@media (max-width:700px)
+{
+    header{
+        padding:24px 1.8%;
+
+    }
+    .title_name
+    {
+        font-size: 28px;
+    }
+    #menu_btn
+    {
+        size: 27px;
+    }
+}
+@media (max-width:450px)
+{
+    header
+    {
+        padding: 24px 1.2
+    }
+    .title_name
+    {
+        font-size:30px;
+    }
+    #menu_btn
+    {
+        size:29px;
+    }
+    .navlist_iteam
+    {
+        top: 0px; 
+        position: absolute;
+        flex-direction: column;
+        justify-content:center;
+        align-items: start;
+        background-color: white;
+        width: 50%;
+        height: 750px;
+        transition: all 0.6s;
+        z-index: 5000;
+    }
 }

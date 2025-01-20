@@ -1,6 +1,6 @@
 import React from 'react'
 import "./aboutUs.css"
-import Home from '../hero/Home'
+
 
 function AboutUs() {
   return (

@@ -1,9 +1,9 @@
 import React from 'react'
-import './home.css';
+import './hero.css';
 
-function Home() {
+function Hero() {
     return (
-        <div className='home'>
+        <div className='home' id='hero'>
             <div className="text_con">
                 <h1>Love the Planet</h1>
                 <h1>we walk on</h1>
@@ -17,4 +17,4 @@ function Home() {
     )
 }
 
-export default Home
+export default Hero

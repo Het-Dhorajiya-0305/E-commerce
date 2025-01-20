@@ -37,7 +37,6 @@ h1
 {
     position: absolute;
     text-decoration: none;
-    width: 140px;
     text-align: center;
     color: black;
     background-color: white;
@@ -49,6 +48,11 @@ h1
     font-weight: 500;
     font-family: "Poppins", sans-serif;
     border-radius: 5px;
+    transition: all 0.5s;
+}
+.home a:hover
+{
+    transform: translateY(-5px) ;
 }
 .women
 {

@@ -1,12 +1,9 @@
 .main_container
 {
-    width: 93%;
-    height: 27rem;
-    /* border: 2px solid black; */
-    margin:auto;
+    width: 87%;
+    margin:30px auto;
     text-align: center;
-    padding: 10px;
-    margin-top: 80px;
+    padding: 10px 1%;
 }
 .main_container h1
 {
@@ -24,7 +21,6 @@
     box-shadow: 0px 0px 16px -3px rgb(211, 210, 210);
     position: relative;
     width: 350px;
-    height: 190px;
     text-align: left;
     line-height: 25px;
     padding: 30px;

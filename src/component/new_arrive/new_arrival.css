@@ -1,33 +1,30 @@
 .arrival{
-    margin: 30px 10px 10px 100px;
-    height: 110rem;
-    /* border: 2px solid black; */
+    padding: 20px 7%;
+    height: 95rem;
 }
-
 .new_arrival {
-    width: 90%;
-    height: 70px;
-    padding: 10px;
+    width: 100%;
+    padding:20px 3%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 2px solid black; */
 }
 
 .new_arrival h2 {
     text-transform: capitalize;
     font-size: 30px;
-    font-family: "Poppins", sans-serif;
+    font-family: var(--text-font);
     font-weight: 400;
 }
 
 .new_arrival a {
     text-decoration: none;
-    font-family: "Poppins", sans-serif;
+    font-family: var(--text-font);
     letter-spacing: 3px;
-    color: #979a9b;
+    color: var(--font-color);
     text-transform: capitalize;
     font-size: 16px;
+    font-weight: 400;
 }
 
 .new_arrival a::after {
@@ -64,9 +61,11 @@
 }
 
 .iteam_list img:hover {
-    width: 400px;
+    /* width: 400px;
     height: 410px;
-    box-shadow: 8px 8px 18px -5px rgba(0, 0, 0, 0.58);
+    box-shadow: 8px 8px 18px -5px rgba(0, 0, 0, 0.58); */
+    transform: translateY(-10px);
+
 }
 
 .iteam {
@@ -90,13 +89,13 @@
 
 .iteam h2 {
     margin: 15px 0px;
-    font-family: "Poppins", sans-serif;
+    font-family: var(--text-font);
     font-size: 20px;
     text-transform: capitalize;
 }
 
 .iteam span {
-    font-family: "Poppins", sans-serif;
+    font-family: var(--text-font);
     text-align: center;
     font-size: 18px;
     color: #979a9b;
