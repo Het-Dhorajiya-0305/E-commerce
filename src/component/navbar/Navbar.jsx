@@ -1,18 +1,14 @@
-import React from 'react'
-import { useState } from 'react';
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom';
 import './Navbar.css'
 import { FaShoppingCart } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
-
-
-
-
+import { StoreContext } from '../../context/StoreContext';
 
 function Navbar() {
-
-  const [showmenu, setShowmenu] = useState(false);
-  const [menu,setmenu]=useState("home");
+  const { menu, setmenu } = useContext(StoreContext);
+  const { showmenu, setShowmenu } = useContext(StoreContext);
 
   return (
     <header className='navbar'>
@@ -20,14 +16,13 @@ function Navbar() {
       <span className='title_name'>plashoe</span>
       <div id="navlist" className={showmenu ? "show" : "hide"}>
         <RxCross2 id='close_btn' size={55} display={showmenu ? "" : "none"} onClick={() => setShowmenu(!showmenu)} />
-        {/* <div className="user"></div> */}
         <ul className='navlist_iteam'>
-          <li onClick={()=>{setmenu("home")}} className={menu==="home"?"active":""}><a href='#hero'>Home</a></li>
-          <li onClick={()=>{setmenu("men")}} className={menu==="men"?"active":""}><a href="#">Men</a></li>
-          <li onClick={()=>{setmenu("women")}} className={menu==="women"?"active":""}><a href='#'>women</a></li>
-          <li onClick={()=>{setmenu("best seller")}} className={menu==="best seller"?"active":""}><a href='#best_seller'> best seller</a></li>
-          <li onClick={()=>{setmenu("new arrivals")}} className={menu==="new arrivals"?"active":""}><a href='#new_arrivals'>new arrivals</a></li>
-          <li onClick={()=>{setmenu("contact")}} className={menu==="contact"?"active":""}><a href='#contact_us'>contact</a></li>
+          <li onClick={() => { setmenu("home") }} className={menu === "home" ? "active" : ""}><Link to="/" className='menubar'>Home</Link></li>
+          <li onClick={() => { setmenu("men") }} className={menu === "men" ? "active" : ""}><Link to="/men" className='menubar'>Men</Link></li>
+          <li onClick={() => { setmenu("women") }} className={menu === "women" ? "active" : ""}><Link to="/women" className='menubar'>Women</Link></li>
+          <li onClick={() => { setmenu("best seller") }} className={menu === "best seller" ? "active" : ""}><Link to="/bestSeller" className='menubar'>Best Seller</Link></li>
+          <li onClick={() => { setmenu("new arrivals") }} className={menu === "new arrivals" ? "active" : ""}><Link to="/newArrival" className='menubar'>New Arrival</Link></li>
+          <li onClick={() => { setmenu("contact") }} className={menu === "contact" ? "active" : ""}><a href='#contact_us' className='menubar'>contact</a></li>
         </ul>
       </div>
       <div className="add_to_cart">
@@ -35,7 +30,6 @@ function Navbar() {
           <FaShoppingCart size={25} color='black' />
         </a>
         <span className='iteam_count'>0</span>
-
       </div>
     </header>
   )

@@ -7,13 +7,15 @@ import Men_Women from '../../component/menandwomen/Men_Women.jsx'
 import NewArrival from '../../component/new_arrive/NewArrival.jsx'
 import Info from '../../component/info/Info.jsx'
 import Review from '../../component/customer_review/Review.jsx'
+import ContactUs from '../../component/contact_us/ContactUs.jsx'
+import Footer from '../../component/footer/Footer.jsx'
 
 
 
 function Home() {
     return (
         <div>
-            <Navbar></Navbar>
+            <Navbar page="home"></Navbar>
             <Hero></Hero>
             <AboutUs></AboutUs>
             <Seller></Seller>

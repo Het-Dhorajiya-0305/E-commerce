@@ -1,7 +1,6 @@
 import React from 'react'
 import './shopping.css';
-import Footer from '../footer/Footer';
-import ContactUs from '../contact_us/ContactUs';
+
 import { IoMenu } from "react-icons/io5";
 import { FaIndianRupeeSign } from "react-icons/fa6";
 import { height } from '@fortawesome/free-brands-svg-icons/fa42Group';
@@ -48,8 +47,6 @@ function Shopping(props) {
                     </div>
                 </div>
             </div>
-            <Footer></Footer>
-            <ContactUs></ContactUs>
         </div>
     )
 }
