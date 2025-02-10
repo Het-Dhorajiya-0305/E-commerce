@@ -84,24 +84,45 @@ header {
 
     display: none;
 }
-
-.add_to_cart {
+.nav_right
+{
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid black; */
+    min-width: 170px;
+}
+.add_to_cart
+{
     position: relative;
 }
-
-.iteam_count {
+.iteam_count
+{
     position: absolute;
     top: -10px;
     right: -13px;
     background-color: black;
     color: white;
-    border-radius: 50%;
-    display: inline-block;
-    text-align: center;
-    font-size: 11px;
-    height: 15px;
-    width: 15px;
+    min-width: 1px;
+    border-radius: 70%;
+    padding: 2px;
+    font-size: 12px;
 }
+
+.sing_in_btn button
+{
+   padding: 7px 15px;
+   border: 1px solid black;
+   /* border-radius: 30%; */
+   cursor: pointer;
+   font-size: 15px;
+   min-width: 50px;
+   font-family: var(--text-font);
+   text-transform: uppercase;
+}
+
+
 
 @media (max-width:1180px) {
     header {

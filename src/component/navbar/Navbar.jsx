@@ -25,11 +25,17 @@ function Navbar() {
           <li onClick={() => { setmenu("contact") }} className={menu === "contact" ? "active" : ""}><a href='#contact_us' className='menubar'>contact</a></li>
         </ul>
       </div>
-      <div className="add_to_cart">
-        <a href="">
-          <FaShoppingCart size={25} color='black' />
-        </a>
-        <span className='iteam_count'>0</span>
+      <div className="nav_right">
+        <div className="add_to_cart">
+          <a href="">
+            <FaShoppingCart size={25} color='black' />
+          </a>
+          <span className='iteam_count'>0</span>
+        </div>
+        <div className="sing_in_btn">
+          <Link to="/singin" className='singin'>sing in</Link>
+          <button></button>
+        </div>
       </div>
     </header>
   )
