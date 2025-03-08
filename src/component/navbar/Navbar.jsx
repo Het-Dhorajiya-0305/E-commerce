@@ -34,7 +34,6 @@ function Navbar() {
         </div>
         <div className="sing_in_btn">
           <Link to="/singin" className='singin'>sing in</Link>
-          <button></button>
         </div>
       </div>
     </header>
