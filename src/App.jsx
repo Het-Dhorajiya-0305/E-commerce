@@ -11,6 +11,7 @@ import NewArrival from './component/new_arrive/NewArrival.jsx';
 import Seller from './component/best_seller/Seller.jsx';
 import Navbar from './component/navbar/Navbar.jsx';
 import SingIn from './component/sing in/SingIn.jsx';
+import AddToCart from './component/add to cart/AddToCart.jsx';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         </Routes>
         <ContactUs></ContactUs> */}
         <SingIn></SingIn>
+        {/* <AddToCart></AddToCart> */}
       </div>
       
     </>
