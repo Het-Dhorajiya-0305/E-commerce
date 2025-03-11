@@ -5,7 +5,7 @@ export const StoreContext = createContext(null)
 
 const StoreContextProvider = (props) => {
 
-    const [menu, setmenu] = useState("");
+    const [menu, setmenu] = useState("home");
     const [showmenu, setShowmenu] = useState(false);
 
     const contexValue = {

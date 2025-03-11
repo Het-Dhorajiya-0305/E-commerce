@@ -5,26 +5,22 @@ import { FaUser } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { FaLock } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa6";
 
 
 function SingIn() {
 
 
-    const [PasswordLogin, setPasswordLogin] = useState(false);
-    const [PasswordSingUp, setPasswordSingUp] = useState(false);
+    const [passwordLogin, setPasswordLogin] = useState(false);
+    const [passwordSingUp, setPasswordSingUp] = useState(false);
     const [active, setActive] = useState(false);
 
 
     const showPasswordLogin = () => {
-        console.log(PasswordLogin)
-        setPasswordLogin(Pass=>!Pass)
-        console.log(PasswordLogin)
-        console.log("hello world")
-
+        setPasswordLogin(Pre=>!Pre)
     }
     const showPasswordSingUp = () => {
-        setPasswordSingUp(Passw=>!Passw)
-        console.log("hello world")
+        setPasswordSingUp(Pre=>!Pre)
     }
 
     return (
@@ -44,10 +40,9 @@ function SingIn() {
                         <label>Password </label></div>
                     <div className="inputForm">
                         <FaLock />
-                        <input type={PasswordSingUp ? "text" : "password"} className="input" placeholder="Enter your Password" />
+                        <input type={passwordLogin ? "text" : "password"} className="input" placeholder="Enter your Password" />
                         <span onClick={showPasswordLogin}>
-
-                            <FaEye size={20} />
+                        {passwordLogin?( <FaEyeSlash size={20}/>):(<FaEye size={20}  />)} 
                         </span>
                     </div>
                     <div className="flex-row">
@@ -76,9 +71,9 @@ function SingIn() {
                         <label>Password </label></div>
                     <div className="inputForm">
                         <FaLock />
-                        <input type={PasswordLogin ? "text" : "password"} className="input" placeholder="Enter your Password" />
+                        <input type={passwordSingUp ? "text" : "password"} className="input" placeholder="Enter your Password" />
                         <span onClick={showPasswordSingUp}>
-                            <FaEye size={20}  />
+                           {passwordSingUp?( <FaEyeSlash size={20}/>):(<FaEye size={20}  />)} 
                         </span>
                     </div>
                     <div className="flex-row">

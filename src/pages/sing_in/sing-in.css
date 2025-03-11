@@ -103,7 +103,10 @@
 .input::placeholder {
   font-family: var(--text-font);
 }
-
+.inputForm span
+{
+  cursor: pointer;
+}
 .flex-row {
   display: flex;
   flex-direction: row;

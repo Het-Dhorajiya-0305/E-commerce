@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Link } from 'react-router-dom';
+import { Link ,NavLink} from 'react-router-dom';
 import './Navbar.css'
 import { FaShoppingCart } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
@@ -28,7 +28,9 @@ function Navbar() {
       <div className="nav_right">
         <div className="add_to_cart">
           <a href="">
-            <FaShoppingCart size={25} color='black' />
+            <Link to="/orders" className='orders'>
+              <FaShoppingCart size={25} color='black' />
+            </Link>
           </a>
           <span className='iteam_count'>0</span>
         </div>
