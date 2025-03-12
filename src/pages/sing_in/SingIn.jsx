@@ -6,6 +6,7 @@ import { IoMdMail } from "react-icons/io";
 import { FaLock } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 
 
 function SingIn() {
@@ -48,7 +49,7 @@ function SingIn() {
                     <div className="flex-row">
                         <span className="span">Forgot password?</span>
                     </div>
-                    <button className="button-submit">Login</button>
+                    <button className="button-submit"><Link to="/" className='link'>Login</Link></button>
 
                 </form>
                 <form className="form sing-up-container" >

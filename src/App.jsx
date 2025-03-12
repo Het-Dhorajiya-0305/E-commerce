@@ -6,8 +6,6 @@ import { Routes, Route } from 'react-router-dom';
 import ContactUs from './component/contact_us/ContactUs.jsx';
 import Men from './pages/men/Men.jsx';
 import Women from './pages/women/Women.jsx';
-import NewArrival from './component/new_arrive/NewArrival.jsx';
-import Seller from './component/best_seller/Seller.jsx';
 import Navbar from './component/navbar/Navbar.jsx';
 import SingIn from './pages/sing_in/SingIn.jsx';
 import Cart from './pages/cart/Cart.jsx';
@@ -19,7 +17,7 @@ function App() {
   return (
     <>
       <div className="app">
-        <Navbar></Navbar>
+        {/* <Navbar></Navbar> */}
         <Routes>
           <Route path='/' element={<Home></Home>}></Route>
           <Route path='/men' element={<Men />}></Route>
@@ -30,8 +28,6 @@ function App() {
           <Route path='/orders' element={<Orders/>}></Route>
           <Route path='/place-order' element={<PlaceOrder/>}></Route>
           <Route path='/product/:productId' element={<Product/>}></Route>
-          
-
         </Routes>
       </div>
       

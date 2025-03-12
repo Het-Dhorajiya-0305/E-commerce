@@ -145,7 +145,12 @@
 .button-submit:hover {
   background-color: #252727;
 }
-
+.button-submit .link
+{
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+}
 .p {
   text-align: center;
   color: black;

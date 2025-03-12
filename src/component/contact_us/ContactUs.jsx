@@ -4,6 +4,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import Footer from '../footer/Footer';
+import Navbar from '../navbar/Navbar';
 
 
 
@@ -11,6 +12,7 @@ function ContactUs() {
     return (
         <>
             <div id='contact_us'>
+                <Navbar></Navbar>
                 <Footer></Footer>
                 <div className='main_box'>
                     <div className="plashoe_content">
