@@ -1,44 +1,51 @@
 import React, { useContext } from 'react'
-import { Link ,NavLink} from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Navbar.css'
 import { FaShoppingCart } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
-import { RxCross2 } from "react-icons/rx";
+import { IoClose } from "react-icons/io5";
 import { StoreContext } from '../../context/StoreContext';
+import { FaUserAlt } from "react-icons/fa";
 
 function Navbar() {
   const { menu, setmenu } = useContext(StoreContext);
   const { showmenu, setShowmenu } = useContext(StoreContext);
 
+  function toggle_menu()
+  {
+    setShowmenu(!showmenu);
+  }
+
   return (
-    <header className='navbar'>
-      <IoMenu className='menu_btn' size={26} onClick={() => setShowmenu(!showmenu)} />
+    <nav className='navbar'>
+      <IoMenu className='menu_btn' size={30} onClick={toggle_menu} />
       <span className='title_name'>plashoe</span>
-      <div id="navlist" className={showmenu ? "show" : "hide"}>
-        <RxCross2 id='close_btn' size={55} display={showmenu ? "" : "none"} onClick={() => setShowmenu(!showmenu)} />
-        <ul className='navlist_iteam'>
+      <div className="navlist">
+
+        <ul className='navlist_iteam' id={showmenu ? 'show' : ''}>
+          <button className='close-btn' onClick={toggle_menu}><IoClose size={55} className='inside-btn' /></button>
+          <li className='user'><FaUserAlt size={25} className='user-icon' /></li>
           <li onClick={() => { setmenu("home") }} className={menu === "home" ? "active" : ""}><Link to="/" className='menubar'>Home</Link></li>
           <li onClick={() => { setmenu("men") }} className={menu === "men" ? "active" : ""}><Link to="/men" className='menubar'>Men</Link></li>
           <li onClick={() => { setmenu("women") }} className={menu === "women" ? "active" : ""}><Link to="/women" className='menubar'>Women</Link></li>
-          <li onClick={() => { setmenu("best seller") }} className={menu === "best seller" ? "active" : ""}><Link to="/bestSeller" className='menubar'>Best Seller</Link></li>
-          <li onClick={() => { setmenu("new arrivals") }} className={menu === "new arrivals" ? "active" : ""}><Link to="/newArrival" className='menubar'>New Arrival</Link></li>
-          <li onClick={() => { setmenu("contact") }} className={menu === "contact" ? "active" : ""}><a href='#contact_us' className='menubar'>contact</a></li>
+
+          <li onClick={() => { setmenu("contact") }} className={menu === "contact" ? "active" : ""}><Link to="/contactus" className='menubar'>Contact Us</Link></li>
+          <li> <Link to="/singin" className='link'>sing in </Link></li>
         </ul>
       </div>
       <div className="nav_right">
-        <div className="add_to_cart">
-          <a href="">
-            <Link to="/orders" className='orders'>
-              <FaShoppingCart size={25} color='black' />
-            </Link>
-          </a>
-          <span className='iteam_count'>0</span>
+        <div className="iteams">
+          <Link to="/orders" className='orders'>
+            <FaShoppingCart size={25} color='black' />
+            <span className='iteam_count'>0</span>
+          </Link>
         </div>
         <div className="sing_in_btn">
-          <Link to="/singin" className='singin'>sing in</Link>
+          <FaUserAlt className="user" size={25} />
+          <Link to="/singin" className='link'>sing in </Link>
         </div>
       </div>
-    </header>
+    </nav>
   )
 }
 

@@ -24,17 +24,15 @@ function App() {
           <Route path='/' element={<Home></Home>}></Route>
           <Route path='/men' element={<Men />}></Route>
           <Route path='/women' element={<Women />}></Route>
-          <Route path='/newArrival' element={<NewArrival />}></Route>
-          <Route path='/bestSeller' element={<Seller />}></Route>
           <Route path='/contactus' element={<ContactUs/>}></Route>
           <Route path='/singin' element={<SingIn/>}></Route>
           <Route path='/cart' element={<Cart/>}></Route>
           <Route path='/orders' element={<Orders/>}></Route>
           <Route path='/place-order' element={<PlaceOrder/>}></Route>
           <Route path='/product/:productId' element={<Product/>}></Route>
+          
 
         </Routes>
-        <ContactUs></ContactUs>
       </div>
       
     </>
