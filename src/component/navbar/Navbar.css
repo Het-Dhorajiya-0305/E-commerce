@@ -253,7 +253,10 @@ nav {
     {
         width: 100px;
         position: absolute;
-        right: -90px;
+        right: 0;
+        display: flex;
+        justify-content: right;
+        align-items: center;
     }
 }
 

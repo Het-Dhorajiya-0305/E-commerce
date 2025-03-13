@@ -13,7 +13,7 @@ function Seller() {
 
 
     return (
-        <div className='seller' id='best_seller'>
+        <div className='seller'>
             <div className='best_seller'>
                 <h2>our best seller</h2>
                 <a href="Home">view all best seller</a>
@@ -43,13 +43,10 @@ function Seller() {
                 </div>
                 <div className="iteam3 iteam">
                     <img src={shoes3}></img>
-                    <span className='view_detail'>view detail</span>
                     <h2>Women’s Candy City Run</h2>
                     <div className="price">
-
                         <span>
-                            <FaIndianRupeeSign className='rupees' />
-
+                            <FaIndianRupeeSign  className='rupees' />
                             3350</span>
                     </div>
                 </div>
