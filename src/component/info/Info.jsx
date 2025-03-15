@@ -9,9 +9,9 @@ import handmade from '../assets/handmade.svg'
 function Info() {
     return (
         <div className='info'>
-            <div className="content">
+            <div className="info-content">
                 <p>Eu eget felis erat mauris aliquam mattis lacus, arcu leo aliquam sapien pulvinar laoreet vulputate sem aliquet phasellus egestas felis, est, vulputate morbi massa mauris vestibulum dui odio.</p>
-                <div className="logo">
+                <div className="info-logo">
                     <img src={vegan} alt="not found" />
                     <img src={recylce2} alt="not found" />
                     <img src={handmade} alt="not found" />

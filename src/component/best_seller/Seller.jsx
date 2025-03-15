@@ -16,7 +16,6 @@ function Seller() {
         <div className='seller'>
             <div className='best_seller'>
                 <h2>our best seller</h2>
-                <a href="Home">view all best seller</a>
             </div>
             <div className="iteam_list">
                 <div className="iteam1 iteam">

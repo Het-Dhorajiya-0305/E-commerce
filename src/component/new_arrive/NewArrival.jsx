@@ -17,7 +17,6 @@ function NewArrival() {
             <div className='arrival' id='new_arrivals'>
                 <div className='new_arrival'>
                     <h2>new arrivals</h2>
-                    <a href="Home">view all best seller</a>
                 </div>
                 <div className="iteam_list">
                     <div className="iteam1 iteam">

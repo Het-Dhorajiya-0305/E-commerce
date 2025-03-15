@@ -7,7 +7,7 @@ import men_image from '../assets/men_image.jpg'
 
 function Review() {
     return (
-        <div className='main_container'>
+        <div className='review-main_container'>
             <h1>Our Customers speak for us</h1>
             <div className="reviews">
                 <div className="r1 rows">
@@ -20,9 +20,8 @@ function Review() {
                         <FaStar color='orange' />
                     </div>
                     <p>“Felis semper duis massa scelerisque ac amet porttitor ac tellus venenatis aliquam varius mauris integer”</p>
-                    <img src={women_image1} alt="not found" width={50} height={50} />
                     <div className="name_of_customer">
-
+                        <img src={women_image1} alt="not found" width={50} height={50} />
                         lily martin
                     </div>
                 </div>
@@ -36,8 +35,8 @@ function Review() {
                         <FaStar color='orange' />
                     </div>
                     <p>“Non malesuada fringilla non varius odio in id pellentesque aliquam volutpat sapien faucibus ”</p>
-                    <img src={men_image} alt="not found" width={50} height={50} />
                     <div className="name_of_customer">
+                        <img src={men_image} alt="not found" width={50} height={50} />
 
                         arden luis
                     </div>
@@ -52,15 +51,15 @@ function Review() {
                         <FaStar color='orange' />
                     </div>
                     <p>“Tortor suspendisse tincidunt accumsan platea pellentesque hac.”</p>
-                    <img src={women_image2} alt="not found" width={50} height={50} />
                     <div className="name_of_customer">
+                        <img src={women_image2} alt="not found" width={50} height={50} />
 
                         maria anna
                     </div>
                 </div>
             </div>
             <div className="last_line">
-            4.8 average rating from 1814 reviews
+                4.8 average rating from 1814 reviews
             </div>
         </div>
     )

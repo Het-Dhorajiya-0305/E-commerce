@@ -1,7 +1,6 @@
 import React from 'react'
 import './men_women.css'
-import men from '../assets/men.jpg'
-import women from '../assets/women.jpg'
+import { Link } from 'react-router-dom'
 
 
 function Men_Women() {
@@ -9,16 +8,15 @@ function Men_Women() {
         <div className='container'>
             <div className="men_iteam">
                 <div className="center_data">
-
                     <h2>men</h2>
-                    <a href="Men">shop men</a>
+                    <Link to='/men' className='shop-btn'>shop Men</Link>
                 </div>
             </div>
             <div className="women_iteam">
                 <div className="center_data">
 
                     <h2>women</h2>
-                    <a href="Women">shop women</a>
+                    <Link to='/women' className='shop-btn'>shop women</Link>
                 </div>
             </div>
         </div>

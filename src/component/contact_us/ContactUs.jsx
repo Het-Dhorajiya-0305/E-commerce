@@ -12,7 +12,6 @@ function ContactUs() {
     return (
         <>
             <div id='contact_us'>
-                <Navbar></Navbar>
                 <Footer></Footer>
                 <div className='main_box'>
                     <div className="plashoe_content">
