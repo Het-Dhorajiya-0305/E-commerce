@@ -23,21 +23,21 @@ function Footer() {
             </div>
             <div className="process">
                 <div className="secure_payment">
-                    <FaLock size={25}/>
+                    <FaLock size={22} className='process-icon'/>
                     <h3>
 
                     secure payment
                     </h3>
                 </div>
                 <div className="express_shipping">
-                    <FaTruck size={25}/>
+                    <FaTruck size={22} className='process-icon'/>
                     <h3>
 
                     Express Shipping
                     </h3>
                 </div>
                 <div className="free_return">
-                    <FaSyncAlt size={25} />
+                    <FaSyncAlt size={25} className='process-icon' />
                     <h3>
 
                     Free Return

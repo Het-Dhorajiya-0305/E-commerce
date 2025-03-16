@@ -23,7 +23,7 @@ function Home() {
             <NewArrival></NewArrival>
             <Info></Info>
             <Review></Review>
-            <ContactUs></ContactUs>
+            <Footer></Footer>
         </div>
     )
 }

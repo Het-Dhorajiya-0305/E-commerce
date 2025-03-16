@@ -1,37 +1,15 @@
 import React from 'react'
 import './shopping.css';
 
-import { IoMenu } from "react-icons/io5";
 import { FaIndianRupeeSign } from "react-icons/fa6";
-import { height } from '@fortawesome/free-brands-svg-icons/fa42Group';
 
 
 function Shopping(props) {
-    // console.log(props.details[1]+"from shopping");  
-    
     return (
-        <div id='main_box'>
-            <div className='main_content_box' id={props.category=="men"?"men_box":"women_box"} >
+            <div className='shopping-main-container'  >
                 <div className='shopping_content'>
                     <h1 className='heading'>{props.category}</h1>
-                    <div className="filter_sort">
-                        <div className="filter_btn">
-                            <button className='filter_button'>
-                                <span className='menu_icon_btn'><IoMenu className='menu_btn_filter' size={26} /></span>
-                                <span>filter shoes</span>
-                            </button>
-                        </div>
-                        <div className="sorting_shoes">
-                            <form action="">
-                                <select name="sorting" id="sorting">
-                                    <option value="menu_order" selected="selected">Default sorting</option>
-                                    <option value="price">Sort by price: low to high</option>
-                                    <option value="price-desc">Sort by price: high to low</option>
-                                </select>
-                            </form>
-                        </div>
-                    </div>
-                    <div className="shopping">
+                    <div className="shopping" id={props.category == "men" ? "men_box" : "women_box"}>
                         {props.details.map((detail) => (
                             <div key={detail.id} className="iteam_shopping">
                                 <img src={detail.loc} alt="not found" />
@@ -47,7 +25,6 @@ function Shopping(props) {
                     </div>
                 </div>
             </div>
-        </div>
     )
 }
 

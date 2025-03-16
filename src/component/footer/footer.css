@@ -8,17 +8,21 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     color: white;
     padding: 7% 10px;
 }
-
+.footer div
+{
+    margin-bottom: 2rem;
+}
 .footer .button {
+    padding: 20px 0%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    width: 24%;
+    width: 30%;
 }
 
 .footer .button .shopping_button {
@@ -41,7 +45,6 @@
 
 .title_footer {
     font-family: "Poppins", sans-serif;
-    top: 150px;
     font-size: 64px;
     font-weight: 500;
 }
@@ -63,17 +66,143 @@
     border-bottom: 1.5px solid rgb(237, 236, 236);
     text-transform: capitalize;
     font-weight: 400;
-    font-size: 18px;
 }
 .process div
 {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
 .process h3 {
 
-    /* margin-left: 15px; */
+    margin-left: 15px;
     font-weight: 500;
+}
+@media screen and (max-width:1150px) {
+    .footer .button
+    {
+        width: 35%;
+    }
+    .process h3
+    {
+        font-size: 18px;
+    }
+
+}
+@media screen and (max-width:1000px) {
+    .footer
+    {
+        height: 100%;
+        width: 100%;
+    }
+    .footer .button
+    {
+        width: 40%;
+    }
+    .title_footer
+    {
+        font-size: 58px;
+    }
+    .process
+    {
+        justify-content: space-between;
+    }
+
+}
+@media screen and (max-width:900px) {
+    .footer
+    {
+        height: 100%;
+        width: 100%;
+    }
+    .footer .button
+    {
+        width: 50%;
+    }
+    .content_data
+    {
+        font-size: 16px;
+    }
+    .footer .button .shopping_button
+    {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+    .process h3
+    {
+        font-size: 17px;
+    }
+
+}
+@media screen and (max-width:760px) {
+    .footer
+    {
+        height: 100%;
+        width: 100%;
+        padding: 5% 3% 1%;
+    }
+    .footer div
+    {
+        margin-bottom: 1.5rem;
+    }
+    .footer .button
+    {
+        width: 100%;
+        flex-direction: column;
+    }
+    .title_footer
+    {
+        font-size: 35px;
+    }
+    .content_data
+    {
+        font-size: 16px;
+    }
+    .footer .button .shopping_button
+    {
+        padding: 10px 20px;
+        font-size: 13px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .process
+    {
+        padding: 2rem 1%;
+        flex-direction: column;
+        height: 12rem;
+    }
+    .process h3
+    {
+        font-size: 16px;
+    }
+
+}
+@media screen and (max-width:550px) {
+
+    .title_footer
+    {
+        font-size: 33px;
+    }
+    .content_data
+    {
+        font-size: 15px;
+    }
+    .process h3
+    {
+        font-size: 15px;
+    }
+  
+}
+@media screen and (max-width:500px) {
+
+    .title_footer
+    {
+        font-size: 30px;
+    }
+    .content_data
+    {
+        font-size: 14px;
+    }
+  
 }

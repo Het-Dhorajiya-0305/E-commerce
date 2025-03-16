@@ -54,7 +54,7 @@ function SingIn() {
                 </form>
                 <form className="form sing-up-container" >
                     <div className="name">
-                        sing up
+                        sign up
                     </div>
                     <div className="flex-column">
                         <label>Username </label></div>

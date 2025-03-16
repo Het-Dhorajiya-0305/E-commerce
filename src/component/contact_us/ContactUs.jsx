@@ -5,6 +5,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import Footer from '../footer/Footer';
 import Navbar from '../navbar/Navbar';
+import { Link } from 'react-router-dom';
 
 
 
@@ -22,10 +23,10 @@ function ContactUs() {
                     <div className="all_detail">
                         <div className="shop">
                             <h3>shop</h3>
-                            <li><a href="#">shop men</a></li>
-                            <li><a href="#">shop women</a></li>
-                            <li><a href="#">lookbook</a></li>
-                            <li><a href="#">sale</a></li>
+                            <li><Link>shop men</Link></li>
+                            <li><Link>shop women</Link></li>
+                            <li><Link>lookbook</Link></li>
+                            <li><Link>sale</Link></li>
                         </div>
                         <div className="need_help">
                             <h3>need help?</h3>
