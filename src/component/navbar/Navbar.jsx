@@ -43,7 +43,7 @@ function Navbar() {
       </div>
       <div className="nav_right">
         <div className="iteams">
-          <Link to="/orders" className='orders'>
+          <Link to="/cart" className='orders'>
             <FaShoppingCart size={25} color='black' />
             <span className='iteam_count'>0</span>
           </Link>
