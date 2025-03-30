@@ -53,13 +53,14 @@ nav {
 }
 
 
-.navlist_iteam Link:hover {
+.navlist_iteam .menubar:hover {
     color: black;
     cursor: pointer;
 }
 
 .menubar
 {
+    text-decoration: none;
     display: inline-flex;
     align-items: center;
     height: 30px;
@@ -85,9 +86,10 @@ nav {
 .nav_right
 {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    min-width: 170px;
+    min-width: 10px;
+    padding: 0 10px;
 }
 .iteams
 {
@@ -116,26 +118,6 @@ nav {
     font-size: 11px;
     font-weight: bold;
     
-}
-.sing_in_btn
-{
-    display: flex;
-    align-items: center;
-}
-.sing_in_btn .link
-{
-    border: 2px solid black;
-    padding: 5px 10px 5px 10px;
-    margin-left: 20px;
-    border-radius: 20px;
-    font-size: 15px;
-    font-family: var(--text-font);
-    color:rgb(145, 144, 144) ;
-    font-weight: 500;
-}
-.sing_in_btn .link:hover
-{
-    color: rgb(114, 114, 114) ;
 }
 .navlist .link{
     display: none;
@@ -230,14 +212,7 @@ nav {
         border: none;
     }
     .navlist .link {
-        display: block;
-        text-align: left;
-        padding: 5px 30px;
-        margin-left: 20px;
-        font-size: 20px;
-        font-weight: bold;
-        border: 2px solid black;
-        border-radius: 20px;
+        display: block; 
     }
     .navlist .link:hover {
         color: rgb(83, 83, 83) ;

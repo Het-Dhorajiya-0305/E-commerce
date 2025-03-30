@@ -19,8 +19,8 @@ function Navbar() {
       <span className='title_name'>plashoe</span>
       <div className="navlist">
         <ul className='navlist_iteam' id={showmenu ? 'show' : ''}>
-        <IoClose size={30} className='inside-btn' onClick={() => setShowmenu(false)}/>
-          <li className='user'><FaUserAlt size={25} className='user-icon' /></li>
+          <IoClose size={30} className='inside-btn' onClick={() => setShowmenu(false)} />
+          <li className='user'> <Link to="/singin" className='link'><FaUserAlt  size={25} color='black'/></Link></li>
           <li onClick={() => {
             setmenu("home");
             setShowmenu(false);
@@ -38,7 +38,6 @@ function Navbar() {
             setmenu("contact");
             setShowmenu(false);
           }} className={menu === "contact" ? "active" : ""}><Link to="/contactus" className='menubar'>Contact Us</Link></li>
-          <li> <Link to="/singin" className='link'>sing in </Link></li>
         </ul>
       </div>
       <div className="nav_right">
@@ -49,8 +48,7 @@ function Navbar() {
           </Link>
         </div>
         <div className="sing_in_btn">
-          <FaUserAlt className="user" size={25} />
-          <Link to="/singin" className='link'>sing in </Link>
+          <Link to="/singin" className='link'><FaUserAlt className="user" size={25} color='black'/></Link>
         </div>
       </div>
     </nav >

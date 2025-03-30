@@ -3,9 +3,14 @@
     padding: 0%;
     margin: 0px;
     scroll-behavior: smooth;
+     scrollbar-width: thin;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 
+}
+.link
+{
+    text-decoration: none;
 }
 .app
 {
