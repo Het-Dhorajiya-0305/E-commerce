@@ -3,6 +3,7 @@ import defaultarray from '../../component/Defaultarray';
 import './cart.css'
 import { FaRupeeSign } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 function Cart() {
   const [cartItems, setCartItems] = useState(defaultarray("male"));
@@ -122,7 +123,10 @@ function Cart() {
               </div>
             </div>
             <div className="payment-process-btn">
-              <button>process to checkout</button>
+              <Link to='/checkout' className='checkout-btn'>
+                process to checkout
+              </Link>
+
             </div>
           </div>
         </div>
