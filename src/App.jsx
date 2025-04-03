@@ -8,7 +8,6 @@ import Men from './pages/men/Men.jsx';
 import Women from './pages/women/Women.jsx';
 import SingIn from './pages/sing_in/SingIn.jsx';
 import Cart from './pages/cart/Cart.jsx';
-import Orders from './pages/orders/Orders.jsx';
 
 import Product from './pages/product/Product.jsx';
 import CheckOut from './pages/checkout/CheckOut.jsx';
@@ -24,8 +23,7 @@ function App() {
           <Route path='/contactus' element={<ContactUs />}></Route>
           <Route path='/singin' element={<SingIn />}></Route>
           <Route path='/cart' element={<Cart />}></Route>
-          <Route path='/orders' element={<Orders />}></Route>
-          <Route path='/product/:productId' element={<Product />}></Route>
+          <Route path='/product/:gender/:pro_id' element={<Product />}></Route>
           <Route path='/checkout' element={<CheckOut></CheckOut>}></Route>
         </Routes>
       </div>

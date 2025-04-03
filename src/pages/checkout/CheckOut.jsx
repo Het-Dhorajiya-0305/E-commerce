@@ -32,7 +32,7 @@ function CheckOut() {
                                 payment
                             </div>
                             <div >
-                                <Link className="payment-btn">place order</Link>
+                                <Link className="payment-btn link">place order</Link>
                             </div>
                         </div>
                     </div>

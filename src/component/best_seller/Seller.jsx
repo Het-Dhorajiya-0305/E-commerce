@@ -7,6 +7,7 @@ import shoes4 from '../assets/shoes4.jpg'
 import shoes5 from '../assets/shoes5.jpg'
 import shoes8 from '../assets/shoes8.jpg'
 import { FaIndianRupeeSign } from "react-icons/fa6";
+import { Link } from 'react-router-dom'
 
 
 function Seller() {
@@ -19,7 +20,9 @@ function Seller() {
             </div>
             <div className="iteam_list">
                 <div className="iteam1 iteam">
-                    <img src={shoes1} alt="" />
+                    <Link to='/product/male/8'>
+                        <img src={shoes1} alt="" />
+                    </Link>
                     <h2>men's classic blue</h2>
                     <div className="price">
 
@@ -30,7 +33,9 @@ function Seller() {
                     </div>
                 </div>
                 <div className="iteam2 iteam">
-                    <img src={shoes2} alt="" />
+                    <Link to='/product/female/4'>
+                        <img src={shoes2} alt="" />
+                    </Link>
                     <h2>Women’s Cream Suede</h2>
                     <div className="price">
 
@@ -41,16 +46,20 @@ function Seller() {
                     </div>
                 </div>
                 <div className="iteam3 iteam">
-                    <img src={shoes3}></img>
+                    <Link to='/product/female/2'>
+                        <img src={shoes3}></img>
+                    </Link>
                     <h2>Women’s Candy City Run</h2>
                     <div className="price">
                         <span>
-                            <FaIndianRupeeSign  className='rupees' />
+                            <FaIndianRupeeSign className='rupees' />
                             3350</span>
                     </div>
                 </div>
                 <div className="iteam4 iteam">
-                    <img src={shoes4} alt="" />
+                    <Link to='/product/female/1'>
+                        <img src={shoes4} alt="" />
+                    </Link>
                     <h2>men's classic blue</h2>
                     <div className="price">
 
@@ -61,7 +70,9 @@ function Seller() {
                     </div>
                 </div>
                 <div className="iteam5 iteam">
-                    <img src={shoes5} alt="" />
+                    <Link to='/product/female/7'>
+                        <img src={shoes5} alt="" />
+                    </Link>
                     <h2>Women’s Orange Sneaker</h2>
                     <div className="price">
 
@@ -72,7 +83,9 @@ function Seller() {
                     </div>
                 </div>
                 <div className="iteam6 iteam">
-                    <img src={shoes8} alt="" />
+                    <Link to='/product/male/2'>
+                        <img src={shoes8} alt="" />
+                    </Link>
                     <h2>Men’s Green Running</h2>
                     <div className="price">
 

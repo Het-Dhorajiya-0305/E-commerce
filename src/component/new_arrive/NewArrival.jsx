@@ -10,6 +10,7 @@ import shoes4 from '../assets/shoes4.jpg'
 import shoes13 from '../assets/shoes13.jpg'
 import shoes14 from '../assets/shoes14.jpg'
 import shoes3 from '../assets/shoes3.jpg'
+import { Link } from 'react-router-dom';
 
 function NewArrival() {
     return (
@@ -20,7 +21,9 @@ function NewArrival() {
                 </div>
                 <div className="iteam_list">
                     <div className="iteam1 iteam">
-                        <img src={shoes7} alt="" />
+                        <Link to="/product/male/1">
+                            <img src={shoes7} alt="" />
+                        </Link>
                         <h2>Men’s Navy Running</h2>
                         <div className="price">
 
@@ -31,7 +34,9 @@ function NewArrival() {
                         </div>
                     </div>
                     <div className="iteam2 iteam">
-                        <img src={shoes8} alt="" />
+                        <Link to="/product/male/2">
+                            <img src={shoes8} alt="" />
+                        </Link>
                         <h2>Men’s Green Running</h2>
                         <div className="price">
 
@@ -42,7 +47,9 @@ function NewArrival() {
                         </div>
                     </div>
                     <div className="iteam3 iteam">
-                        <img src={shoes9}></img>
+                        <Link to="/product/female/11">
+                            <img src={shoes9}></img>
+                        </Link>
                         <span className='view_detail'>view detail</span>
                         <h2>Women’s Tan Sneaker
                         </h2>
@@ -55,7 +62,9 @@ function NewArrival() {
                         </div>
                     </div>
                     <div className="iteam4 iteam">
-                        <img src={shoes10} alt="" />
+                        <Link to="/product/female/6">
+                            <img src={shoes10} alt="" />
+                        </Link>
                         <h2>Women’s Mint Sneaker
                         </h2>
                         <div className="price">
@@ -67,7 +76,9 @@ function NewArrival() {
                         </div>
                     </div>
                     <div className="iteam5 iteam">
-                        <img src={shoes11} alt="" />
+                        <Link to="/product/female/8">
+                            <img src={shoes11} alt="" />
+                        </Link>
                         <h2>Women’s Peach Training</h2>
                         <div className="price">
 
@@ -78,7 +89,9 @@ function NewArrival() {
                         </div>
                     </div>
                     <div className="iteam6 iteam">
-                        <img src={shoes4} alt="" />
+                        <Link to="/product/female/1">
+                            <img src={shoes4} alt="" />
+                        </Link>
                         <h2>Women’s Blue Training</h2>
                         <div className="price">
 
@@ -89,7 +102,9 @@ function NewArrival() {
                         </div>
                     </div>
                     <div className="iteam7 iteam">
-                        <img src={shoes13} alt="" />
+                        <Link to="/product/male/6">
+                            <img src={shoes13} alt="" />
+                        </Link>
                         <h2>Men’s Earth-Tone Sneaker
                         </h2>
                         <div className="price">
@@ -101,7 +116,9 @@ function NewArrival() {
                         </div>
                     </div>
                     <div className="iteam8 iteam">
-                        <img src={shoes14} alt="" />
+                        <Link to="/product/male/7">
+                            <img src={shoes14} alt="" />
+                        </Link>
                         <h2>Men’s Moonstone Sneaker</h2>
                         <div className="price">
 
@@ -112,7 +129,9 @@ function NewArrival() {
                         </div>
                     </div>
                     <div className="iteam9 iteam">
-                        <img src={shoes3} alt="" />
+                        <Link to="/product/female/2">
+                            <img src={shoes3} alt="" />
+                        </Link>
                         <h2>Women’s Candy City Run</h2>
                         <div className="price">
 

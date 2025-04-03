@@ -10,7 +10,9 @@ import { Link } from 'react-router-dom';
 
 function ContactUs() {
     return (
-        <></>
+        <div className="contact-us-main-container">
+           
+        </div>
 
     )
 }

@@ -123,7 +123,7 @@ function Cart() {
               </div>
             </div>
             <div className="payment-process-btn">
-              <Link to='/checkout' className='checkout-btn'>
+              <Link to='/checkout' className='checkout-btn link'>
                 process to checkout
               </Link>
 
