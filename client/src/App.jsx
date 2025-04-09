@@ -8,7 +8,6 @@ import Men from './pages/men/Men.jsx';
 import Women from './pages/women/Women.jsx';
 import SingIn from './pages/sing_in/SingIn.jsx';
 import Cart from './pages/cart/Cart.jsx';
-
 import Product from './pages/product/Product.jsx';
 import CheckOut from './pages/checkout/CheckOut.jsx';
 
