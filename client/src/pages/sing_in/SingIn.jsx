@@ -27,7 +27,7 @@ function SingIn() {
     return (
         <div className={active ? 'sing-in-main-container active' : 'sing-in-main-container'}>
             <div className="inner-box">
-                <form className="form" >
+                <form className="form" method='post' action='/user' >
                     <div className="name">
                         login
                     </div>
@@ -49,7 +49,7 @@ function SingIn() {
                     <div className="flex-row">
                         <span className="span">Forgot password?</span>
                     </div>
-                    <button className="button-submit"><Link to="/" className='link'>Login</Link></button>
+                    <button className="button-submit"><Link to="/home" className='link'>Login</Link></button>
 
                 </form>
                 <form className="form sing-up-container" >

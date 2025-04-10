@@ -48,7 +48,7 @@ function Navbar() {
           </Link>
         </div>
         <div className="sing_in_btn">
-          <Link to="/singin" className='link'><FaUserAlt className="user" size={25} color='black'/></Link>
+          <Link to="/user/register" className='link'><FaUserAlt className="user" size={25} color='black'/></Link>
         </div>
       </div>
     </nav >
