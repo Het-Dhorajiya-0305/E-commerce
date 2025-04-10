@@ -6,9 +6,9 @@ import uploadImage from '../utils/cloudinary.js';
 
 
 const registerUser = asyncHandler(async (req, res) => {
-    const { username, email, password } = req.body;
+    const { userName, email, password } = req.body;
 
-    if (!username || !email || !password) {
+    if (!userName || !email || !password) {
         return res.status(400).json({
             success: false,
             message: "Please provide all the fields",
@@ -17,7 +17,7 @@ const registerUser = asyncHandler(async (req, res) => {
     const existedUser = await User.findOne(
         {
             $or: [
-                { username },
+                { userName },
                 { email }
             ]
         }
@@ -30,22 +30,70 @@ const registerUser = asyncHandler(async (req, res) => {
     }
 
     const newUser = await User.create({
-        userName:username,
-        email:email,
-        password:password,
+        userName: userName,
+        email: email,
+        password: password,
     })
 
-    const createdUser=await User.findById(newUser._id).select(
+    const createdUser = await User.findById(newUser._id).select(
         "-password"
     )
 
-    if(!createdUser){
+    if (!createdUser) {
         return res.status(500).json({
-            success:false,
-            message:"something went wrong"
+            success: false,
+            message: "something went wrong"
         })
     }
     return res.status(200).json(createdUser)
 })
 
-export { registerUser };
+// 
+// loginUser
+
+
+const loginUser = asyncHandler(async (req, res) => {
+
+    const { userName, password } = req.body;
+
+    console.log(req.body)
+
+    if (!userName || !password) {
+        return res.status(404).json({
+            success: false,
+            message: "userName and password are required"
+        })
+    }
+
+    const user = await User.findOne({userName})
+
+    console.log("user = ",user)
+
+    if (!user) {
+        return res.status(404).json({
+            success: false,
+            message: "user does not exist!!"
+        })
+    }
+
+    const isPasswordCorrect = await user.isPasswordCorrect(password);
+
+    if (!isPasswordCorrect) {
+        return res.status(400).json({
+            success: false,
+            message: "invalid password"
+        })
+    }
+
+
+    return res.status(200).json({
+        success: true,
+        message: "login successfully"
+    })
+
+
+
+
+})
+
+export { registerUser, loginUser };
