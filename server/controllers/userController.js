@@ -3,10 +3,27 @@ import { asyncHandler } from '../utils/asyncHandler.js';
 import mongoose from 'mongoose';
 import uploadImage from '../utils/cloudinary.js';
 
+const generateAccessAndRefereshTokens = async (userId) => {
+    try {
+        const user = await User.findById(userId);
 
+        const accessToken = await user.generateAccessToken();
+        const refreshToken = await user.generateRefreshToken();
+
+        user.refreshToken = refreshToken;
+
+        user.save({ validateBeforeSave: false });
+
+        return { accessToken, refreshToken }
+    } catch (error) {
+        return error
+    }
+}
 
 const registerUser = asyncHandler(async (req, res) => {
     const { userName, email, password } = req.body;
+
+    console.log(req.body)
 
     if (!userName || !email || !password) {
         return res.status(400).json({
@@ -65,9 +82,9 @@ const loginUser = asyncHandler(async (req, res) => {
         })
     }
 
-    const user = await User.findOne({userName})
+    const user = await User.findOne({ userName })
 
-    console.log("user = ",user)
+    console.log("user = ", user)
 
     if (!user) {
         return res.status(404).json({
@@ -84,6 +101,10 @@ const loginUser = asyncHandler(async (req, res) => {
             message: "invalid password"
         })
     }
+    const { accessToken, refreshToken } = await generateAccessAndRefereshTokens(user._id);
+
+    console.log("accessToken = ", accessToken)
+    console.log("refreshToken = ", refreshToken)
 
 
     return res.status(200).json({
