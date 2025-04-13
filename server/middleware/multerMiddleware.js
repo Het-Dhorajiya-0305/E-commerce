@@ -1,6 +1,14 @@
-import multer from "multer";
 
-// You can customize this storage config as needed
-const storage = multer.memoryStorage(); // or diskStorage if saving to disk
+import multer from 'multer';
 
-export const upload = multer({ storage });
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, './public/temp')
+    },
+    filename: function (req, file, cb) {
+        const uniqueSuffix = `${Date.now()}-${Math.round(Math.random() * 1E9)}`;
+        cb(null, `${uniqueSuffix}-${file.originalname}`);
+    }
+})
+
+export const upload = multer({ storage })

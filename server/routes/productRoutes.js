@@ -5,12 +5,7 @@ import { upload } from "../middleware/multerMiddleware.js";
 const router = Router();
 
 router.route("/addproduct").post(
-    upload.fields([
-        {
-            name: "proImage",
-            maxCount: 1
-        },
-    ]),addProduct
+    upload.single("proImage"), addProduct
 )
 
 export default router;
