@@ -5,13 +5,13 @@ import verifyUser from "../middleware/authMiddleware.js";
 
 const router = Router();
 
-router.route('/register').post(registerUser);
+router.post('/register',registerUser);
 
 
-router.route('/login').post(loginUser)
+router.post('/login',loginUser)
 
-router.route("/logout").get(verifyUser,logOutUser)
+router.get("/logout",verifyUser,logOutUser)
 
-router.route("/changepassword").post(verifyUser,changePassword)
+router.post("/changepassword",verifyUser,changePassword)
 
 export default router;
