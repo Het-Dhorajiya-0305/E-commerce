@@ -1,5 +1,6 @@
 import User from '../models/usermodel.js';
 import { asyncHandler } from '../utils/asyncHandler.js';
+import validator from 'validator';
 
 
 const generateAccessAndRefereshTokens = async (userId) => {
@@ -22,14 +23,29 @@ const generateAccessAndRefereshTokens = async (userId) => {
 // register user
 
 const registerUser = asyncHandler(async (req, res) => {
+    console.log(req.body)
     const { userName, email, password } = req.body;
 
-    console.log(req.body)
 
     if (!userName || !email || !password) {
         return res.status(400).json({
             success: false,
             message: "Please provide all the fields",
+        })
+    }
+
+    if(!validator.isEmail(email))
+    {
+        return res.status(400).json({
+            success: false,
+            message: "Please provide valid email",
+        })
+    }
+    if(password.length<8)   
+    {
+        return res.status(400).json({
+            success: false,
+            message: "password should be atleast 8 characters",
         })
     }
     const existedUser = await User.findOne(
