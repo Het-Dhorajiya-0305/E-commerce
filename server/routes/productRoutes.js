@@ -4,8 +4,7 @@ import { upload } from "../middleware/multerMiddleware.js";
 
 const router = Router();
 
-router.route("/addproduct").post(
-    upload.single("proImage"), addProduct
-)
+router.post("/addproduct",upload.single("proImage"), addProduct)
+router.get("/deleteproduct/:id")
 
 export default router;
