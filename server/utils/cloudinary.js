@@ -2,7 +2,7 @@ import { v2 as cloudinary } from 'cloudinary';
 import fs from 'fs';
 import dotenv from 'dotenv';
 
-dotenv.config(); 
+dotenv.config();
 
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_NAME,
@@ -10,16 +10,16 @@ cloudinary.config({
     api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
-const uploadImage = async (localFilePath) => {
-    try{
-        if(!localFilePath) return null;
-   
-        const response=await cloudinary.uploader.upload(localFilePath,{
-             public_id: `products/${Date.now()}`,
-             folder:"products"
+const uploadImage = async (localFilePath,proname) => {
+    try {
+        if (!localFilePath) return null;
+
+        const response = await cloudinary.uploader.upload(localFilePath, {
+            public_id: `/${proname}`,
+            folder: "products"
         })
-        console.log("file had been uploaded on cloudinary ",response.url);
-        
+        console.log("file had been uploaded on cloudinary ", response.url);
+
         if (fs.existsSync(localFilePath)) {
             fs.unlinkSync(localFilePath);
         }
@@ -27,7 +27,7 @@ const uploadImage = async (localFilePath) => {
         return response
 
     }
-    catch(error){
+    catch (error) {
         if (fs.existsSync(localFilePath)) {
             fs.unlinkSync(localFilePath);
         }
@@ -37,4 +37,19 @@ const uploadImage = async (localFilePath) => {
     }
 }
 
-export default uploadImage;
+const deleteImage = async (proname) => {
+    try 
+    {
+        const deletedImage=await cloudinary.uploader.destroy(`products/${proname}`,(reult)=>{
+            console.log("image deleted");
+        })
+        return deletedImage;
+
+    }
+    catch (error) {
+        console.log("error in deleting image :", error);
+        return null;
+    }
+}
+
+export  {uploadImage,deleteImage};

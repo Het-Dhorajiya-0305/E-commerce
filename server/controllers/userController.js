@@ -79,7 +79,10 @@ const registerUser = asyncHandler(async (req, res) => {
             message: "something went wrong"
         })
     }
-    return res.status(200).json(createdUser)
+    return res.status(200).json({
+        message:"user created successfully",
+        success: true,
+        user: createdUser})
 })
 
 // loginUser
