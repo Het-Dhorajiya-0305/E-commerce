@@ -1,6 +1,4 @@
 import './App.css'
-import { useState } from 'react';
-
 import Home from './pages/home/Home.jsx';
 import { Routes, Route } from 'react-router-dom';
 import ContactUs from './component/contact_us/ContactUs.jsx';

@@ -19,10 +19,6 @@ app.use(express.static("public"))
 app.use('/user', userRoutes)
 app.use('/product', productRoutes);
 
-app.get('/', (req, res) => {
-    res.send("Server is running")
- }
-)
 
 export default app;
 

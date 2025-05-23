@@ -8,5 +8,9 @@ const buyIteamSchema=mongoose.Schema({
     proPrice:{
         type:Number,
         required:true
+    },
+    proIteams:{
+        type:Number,
+        require:true
     }
 })

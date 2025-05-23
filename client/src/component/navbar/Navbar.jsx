@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Link, NavLink } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import './Navbar.css'
 import { FaShoppingCart } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
