@@ -1,11 +1,10 @@
 *{
-    padding: 5px;
     margin: 0px;
     scroll-behavior: smooth;
     scrollbar-width: thin;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-
+    
 }
 .link
 {
@@ -18,4 +17,5 @@
     --font-color:rgb(145, 144, 144);
     width: 100%;
     height: 100vh;
+    padding: 10px;
 }

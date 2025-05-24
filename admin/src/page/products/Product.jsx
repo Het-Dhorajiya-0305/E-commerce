@@ -25,7 +25,7 @@ function Product() {
             <div className="iteam-list-container" key={index}>
               <div className="iteam-image"><img src={iteam.loc} alt="not found" /></div>
               <div className="iteam-name">{iteam.name}</div>
-              <div className="iteam-price"><FaIndianRupeeSign className='rupees' size={25}/>{iteam.price}</div>
+              <div className="iteam-price"><FaIndianRupeeSign className='rupees' size={18}/>{iteam.price}</div>
               <div className="iteam-stock">{iteam.gender}</div>
               <div className="delete-btn" onClick={()=>{console.log("delte btn")}}><MdDelete  size={30}/></div>
             </div>

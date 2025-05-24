@@ -14,11 +14,11 @@
 {
     position:fixed;
     display: flex;
-    justify-content: space-around;
-    width: 75%;
+    justify-content: space-between;
+    width: 76%;
     z-index: 12;
     background-color: rgb(236, 228, 228);
-    padding: 15px 15px;
+    padding: 20px 15px;
     font-family: var(--text-font);
     color: var(--font-color);
     font-size: 20px;
@@ -39,6 +39,7 @@
 }
 .iteam-list-inner-container .iteam-list-container
 {
+    padding:10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,7 +52,7 @@
 }
 .iteam-list-inner-container .iteam-list-container .iteam-image img
 {
-    width: 100%;
+    width: 70%;
 }
 .iteam-price
 {
