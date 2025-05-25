@@ -9,7 +9,11 @@ import Cart from './pages/cart/Cart.jsx';
 import Product from './pages/product/Product.jsx';
 import CheckOut from './pages/checkout/CheckOut.jsx';
 
+export const backEndUrl=import.meta.env.VITE_BACKEND_URL;
+
 function App() {
+
+
   return (
     <>
       <div className="app">

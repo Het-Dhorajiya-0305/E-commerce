@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Link} from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
 import './Navbar.css'
 import { FaShoppingCart } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
@@ -20,35 +20,35 @@ function Navbar() {
       <div className="navlist">
         <ul className='navlist_iteam' id={showmenu ? 'show' : ''}>
           <IoClose size={30} className='inside-btn' onClick={() => setShowmenu(false)} />
-          <li className='user'> <Link to="/singin" className='link'><FaUserAlt  size={25} color='black'/></Link></li>
+          <li className='user'> <NavLink to="/singin" className='link'><FaUserAlt  size={25} color='black'/></NavLink></li>
           <li onClick={() => {
             setmenu("home");
             setShowmenu(false);
-          }} className={menu === "home" ? "active" : ""}><Link to="/" className='menubar'>Home</Link></li>
+          }} ><NavLink to="/" className='menubar'>Home</NavLink></li>
           <li onClick={() => {
             setmenu("men");
             setShowmenu(false);
-          }} className={menu === "men" ? "active" : ""}><Link to="/men" className='menubar'>Men</Link></li>
+          }}><NavLink to="/men" className='menubar'>Men</NavLink></li>
           <li onClick={() => {
             setmenu("women");
             setShowmenu(false);
-          }} className={menu === "women" ? "active" : ""}><Link to="/women" className='menubar'>Women</Link></li>
+          }} ><NavLink to="/women" className='menubar'>Women</NavLink></li>
 
           <li onClick={() => {
             setmenu("contact");
             setShowmenu(false);
-          }} className={menu === "contact" ? "active" : ""}><Link to="/contactus" className='menubar'>Contact Us</Link></li>
+          }} ><NavLink to="/contactus" className='menubar'>Contact Us</NavLink></li>
         </ul>
       </div>
       <div className="nav_right">
         <div className="iteams">
-          <Link to="/cart" className='orders'>
+          <NavLink to="/cart" className='orders'>
             <FaShoppingCart size={25} color='black' />
             <span className='iteam_count'>0</span>
-          </Link>
+          </NavLink>
         </div>
         <div className="sing_in_btn">
-          <Link to="/user/register" className='link'><FaUserAlt className="user" size={25} color='black'/></Link>
+          <NavLink to="/user/register" className='link'><FaUserAlt className="user" size={25} color='black'/></NavLink>
         </div>
       </div>
     </nav >

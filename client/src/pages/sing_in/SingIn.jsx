@@ -6,11 +6,13 @@ import { IoMdMail } from "react-icons/io";
 import { FaLock } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa6";
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import axios from 'axios';
+import { backEndUrl } from '../../App.jsx';
 
 
 function SingIn() {
+
 
 
     const [passwordLogin, setPasswordLogin] = useState(false);
@@ -29,16 +31,18 @@ function SingIn() {
         setPasswordSingUp(Pre=>!Pre)
     }
 
-    const onSubmit=(e)=>{
+    const onSignInSubmit=(e)=>{
         e.preventDefault();
         try {
             const formData=new FormData();
 
-            formData.append('username',userName)
+            formData.append('userName',userName)
             formData.append('email',email)
             formData.append("password",password);
 
+            const response=axios.post(backEndUrl+"/user/register",formData)
 
+            // console.log(response);
 
         } catch (error) {
             
@@ -48,7 +52,7 @@ function SingIn() {
     return (
         <div className={active ? 'sing-in-main-container active' : 'sing-in-main-container'}>
             <div className="inner-box">
-                <form className="form" method='post' action='/user' >
+                <form className="form"  action='/user' >
                     <div className="name">
                         login
                     </div>
@@ -70,10 +74,10 @@ function SingIn() {
                     <div className="flex-row">
                         <span className="span">Forgot password?</span>
                     </div>
-                    <button className="button-submit"><Link to="/home" className='link'>Login</Link></button>
+                    <button className="button-submit"><NavLink to="/home" className='link'>Login</NavLink></button>
 
                 </form>
-                <form className="form sing-up-container" >
+                <form className="form sing-up-container" onSubmit={onSignInSubmit} action='/user/login' >
                     <div className="name">
                         sign up
                     </div>
