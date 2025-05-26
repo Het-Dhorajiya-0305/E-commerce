@@ -1,6 +1,11 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import './sidebar.css'
+import { IoIosAddCircle } from "react-icons/io";
+import { FaList } from "react-icons/fa6";
+import { FaCartShopping } from "react-icons/fa6";
+
+
 
 function Sidebar() {
     return (
@@ -10,17 +15,17 @@ function Sidebar() {
                 <div className="sidebar">   
                     <ul className='sidebar_iteam' >
                         <div className="add-iteams">
-                            <li className="add-iteam-li"><Link to="/addIteams" className='link'>add iteam</Link></li>
+                            <li className="add-iteam-li"><NavLink to="/addIteams" className='link'><IoIosAddCircle size={25} className='icon'/><span>add iteam</span></NavLink></li>
                         </div>
                         <div className="iteam-list">
-                            <li className="iteam-list-li"><Link to="/iteamList" className='link'>iteams</Link></li>
+                            <li className="iteam-list-li"><NavLink to="/iteamList" className='link'><FaList size={22} className='icon'/><span>iteams</span></NavLink></li>
                         </div>
                         <div className="orders">
-                            <li className="orders-li"><Link to="/orders" className='link'>orders</Link></li>
+                            <li className="orders-li"><NavLink to="/orders" className='link'><FaCartShopping size={25} className='icon'/><span>orders</span></NavLink></li>
                         </div>
                     </ul>
                 </div>
-                <div className="login-btn"><Link to="/adminLogin" className='link'>Login</Link></div>
+                <div className="login-btn"><NavLink to="/adminLogin" className='link'>Login</NavLink></div>
             </div>
         </div>
     )

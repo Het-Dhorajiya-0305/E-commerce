@@ -34,7 +34,7 @@
 .sidebar div {
     border: 1px solid rgba(109, 108, 108, 0.458);
     margin-bottom: 8px;
-    width: 85%;
+    width: 80%;
     height: 2.8rem;
     border-radius: 25px 0px 0px 25px;
     transition: all 0.1s;
@@ -47,9 +47,11 @@
 }
 
 .sidebar div li .link {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: start;
     width: 100%;
-    padding: 15px 10px;
+    padding: 10px 15px;
     font-family: var(--text-font);
     color: var(--font-color);
     text-transform: uppercase;
@@ -58,6 +60,9 @@
     letter-spacing: 1px;
 }
 
+.sidebar div li .link span{
+    margin-left: 10px;
+}
 .sidebar div:hover {
     border: 1px solid rgba(109, 108, 108, 0.974);
 
