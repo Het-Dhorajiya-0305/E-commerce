@@ -42,7 +42,7 @@
 }
 .men_iteam
 {
-    background: url(../assets/men.jpg);
+    background: url(../../assets/men.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -51,7 +51,7 @@
 }
 .women_iteam
 {
-    background: url(../assets/women.jpg);
+    background: url(../../assets/women.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

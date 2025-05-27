@@ -5,7 +5,7 @@ import Navbar from '../../component/navbar/Navbar.jsx'
 function Men() {
   return (
     <div id='men'>
-      <Navbar></Navbar>
+      {/* <Navbar></Navbar> */}
       <ShopMen></ShopMen>
     </div>
   )

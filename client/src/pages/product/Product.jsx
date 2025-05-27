@@ -1,41 +1,44 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import React from 'react'
-import defaultarray from '../../component/Defaultarray'
-import Navbar from '../../component/navbar/Navbar'
 import './product.css'
 import { FaRupeeSign } from "react-icons/fa";
 import { useParams } from 'react-router-dom'
+import { StoreContext } from '../../context/StoreContext';
+import defaultarray from '../../component/Defaultarray';
+
 
 function Product() {
-  const [cartItems, setCartItems] = useState(defaultarray(""));
   const { pro_id, gender } = useParams();
+  const {addToCart,cartItems} =useContext(StoreContext)
 
-  const product = cartItems.find((item) => item.id === pro_id && item.gender === gender);
+  const arr=defaultarray("");
 
-  function increamentOrder(p_id, gen) {
-    setCartItems((prevCart) =>
-      prevCart.map((item) =>
-        item.id === p_id && item.gender === gen
-          ? { ...item, quantity: item.quantity + 1 }
-          : item
-      )
-    );
-  }
+  const product = arr.find((item) => item.id === pro_id && item.gender === gender);
 
-  function decreamentOrder(p_id, gen) {
-    setCartItems((prevCart) =>
-      prevCart.map((item) =>
-        item.id === p_id && item.gender === gen && item.quantity > 1
-          ? { ...item, quantity: item.quantity - 1 }
-          : item
-      )
-    );
-  }
+  // function increamentOrder(p_id, gen) {
+  //   setCartItems((prevCart) =>
+  //     prevCart.map((item) =>
+  //       item.id === p_id && item.gender === gen
+  //         ? { ...item, quantity: item.quantity + 1 }
+  //         : item
+  //     )
+  //   );
+  // }
+
+  // function decreamentOrder(p_id, gen) {
+  //   setCartItems((prevCart) =>
+  //     prevCart.map((item) =>
+  //       item.id === p_id && item.gender === gen && item.quantity > 1
+  //         ? { ...item, quantity: item.quantity - 1 }
+  //         : item
+  //     )
+  //   );
+  // }
 
   if (!product) {
     return (
       <div className='product-main-container'>
-        <Navbar />
+        {/* <Navbar /> */}
         <div className="product-inner-container">
           <h2>Product not found</h2>
         </div>
@@ -45,7 +48,6 @@ function Product() {
 
   return (
     <div className='product-main-container'>
-      <Navbar />
       <div className="product-inner-container">
         <div className="product-detail-container">
           <div className="product-image">
@@ -59,12 +61,16 @@ function Product() {
             </div>
             <div className="add-to-cart-increment">
               <div className="increament-btn">
-                <div className="minus" onClick={() => decreamentOrder(pro_id, gender)}>-</div>
+                <div className="minus" 
+                // onClick={() => decreamentOrder(pro_id, gender)}
+                  >-</div>
                 <div className="orders-count">{product.quantity}</div>
-                <div className="plus" onClick={() => increamentOrder(pro_id, gender)}>+</div>
+                <div className="plus"
+                //  onClick={() => increamentOrder(pro_id, gender)}
+                >+</div>
               </div>
               <div className="add-to-cart-btn">
-                <button>add to cart</button>
+                <button onClick={()=>addToCart(product.id,product.quantity)}>add to cart</button>
               </div>
             </div>
           </div>

@@ -1,11 +1,11 @@
 import React from 'react'
 import './seller.css'
-import shoes1 from '../assets/shoes1.jpg'
-import shoes2 from '../assets/shoes2.jpg'
-import shoes3 from '../assets/shoes3.jpg'
-import shoes4 from '../assets/shoes4.jpg'
-import shoes5 from '../assets/shoes5.jpg'
-import shoes8 from '../assets/shoes8.jpg'
+import shoes1 from '../../assets/shoes1.jpg'
+import shoes2 from '../../assets/shoes2.jpg'
+import shoes3 from '../../assets/shoes3.jpg'
+import shoes4 from '../../assets/shoes4.jpg'
+import shoes5 from '../../assets/shoes5.jpg'
+import shoes8 from '../../assets/shoes8.jpg'
 import { FaIndianRupeeSign } from "react-icons/fa6";
 import { Link } from 'react-router-dom'
 

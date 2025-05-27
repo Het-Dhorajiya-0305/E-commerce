@@ -1,9 +1,9 @@
 import React from 'react'
 import './review.css'
 import { FaStar } from "react-icons/fa";
-import women_image1 from '../assets/women_image1.jpg'
-import women_image2 from '../assets/women_image2.jpeg'
-import men_image from '../assets/men_image.jpg'
+import women_image1 from '../../assets/women_image1.jpg'
+import women_image2 from '../../assets/women_image2.jpeg'
+import men_image from '../../assets/men_image.jpg'
 
 function Review() {
     return (

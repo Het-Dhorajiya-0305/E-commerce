@@ -15,7 +15,7 @@ import Footer from '../../component/footer/Footer.jsx'
 function Home() {
     return (
         <div>
-            <Navbar page="home"></Navbar>
+            {/* <Navbar page="home"></Navbar> */}
             <Hero></Hero>
             <AboutUs></AboutUs>
             <Seller></Seller>

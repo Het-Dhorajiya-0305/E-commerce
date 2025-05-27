@@ -7,10 +7,8 @@ import { IoClose } from "react-icons/io5";
 import { StoreContext } from '../../context/StoreContext';
 import { FaUserAlt } from "react-icons/fa";
 
-function Navbar() {
-  const { menu, setmenu } = useContext(StoreContext);
-  const { showmenu, setShowmenu } = useContext(StoreContext);
-
+function  Navbar() {
+  const { menu, setmenu ,showmenu, setShowmenu,getCartCount} = useContext(StoreContext);
 
 
   return (
@@ -44,7 +42,7 @@ function Navbar() {
         <div className="iteams">
           <NavLink to="/cart" className='orders'>
             <FaShoppingCart size={25} color='black' />
-            <span className='iteam_count'>0</span>
+            <span className='iteam_count'>{getCartCount()}</span>
           </NavLink>
         </div>
         <div className="sing_in_btn">

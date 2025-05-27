@@ -13,6 +13,7 @@ function AddIteam() {
               <label>Product Image</label>
             </div>
             <div className="inputForm">
+              <img src= alt="" />
               <input type="file" name="" id="" />
             </div>
             <div className="flex-column">

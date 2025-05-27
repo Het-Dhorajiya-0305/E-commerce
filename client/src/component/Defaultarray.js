@@ -1,26 +1,28 @@
 
 
-import shoes7 from './assets/shoes7.jpg';
-import shoes8 from './assets/shoes8.jpg';
-import mint_shoes from './assets/mint_shoes.jpg';
-import red_shoes from './assets/red_shoes.jpg';
-import black_shoes from './assets/black_shoes.jpg';
-import shoes13 from './assets/shoes13.jpg';
-import shoes14 from './assets/shoes14.jpg';
-import shoes1 from './assets/shoes1.jpg';
+import shoes7 from '../assets/shoes7.jpg';
+import shoes8 from '../assets/shoes8.jpg';
+import mint_shoes from '../assets/mint_shoes.jpg';
+import red_shoes from '../assets/red_shoes.jpg';
+import black_shoes from '../assets/black_shoes.jpg';
+import shoes13 from '../assets/shoes13.jpg';
+import shoes14 from '../assets/shoes14.jpg';
+import shoes1 from '../assets/shoes1.jpg';
+import shoes4 from '../assets/shoes4.jpg';
+import shoes3 from '../assets/shoes3.jpg';
+import choco_city from '../assets/choco_city.jpg';
+import shoes2 from '../assets/shoes2.jpg';
+import green_training from '../assets/green_traning.jpg';
+import shoes10 from '../assets/shoes10.jpg';
+import shoes5 from '../assets/shoes5.jpg';
+import shoes11 from '../assets/shoes11.jpg';
+import pink_suede from '../assets/pink_suede.jpg';
+import pink_training from '../assets/pink_training.jpg';
+import shoes9 from '../assets/shoes9.jpg';
+import tosca_city from '../assets/tosca_city.jpg';
 
-import shoes4 from './assets/shoes4.jpg';
-import shoes3 from './assets/shoes3.jpg';
-import choco_city from './assets/choco_city.jpg';
-import shoes2 from './assets/shoes2.jpg';
-import green_training from './assets/green_traning.jpg';
-import shoes10 from './assets/shoes10.jpg';
-import shoes5 from './assets/shoes5.jpg';
-import shoes11 from './assets/shoes11.jpg';
-import pink_suede from './assets/pink_suede.jpg';
-import pink_training from './assets/pink_training.jpg';
-import shoes9 from './assets/shoes9.jpg';
-import tosca_city from './assets/tosca_city.jpg';
+
+
 export default function defaultarray(gender) {
     if (gender === "male") {
         const arr = [

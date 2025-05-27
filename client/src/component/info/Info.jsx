@@ -1,9 +1,9 @@
 import React from 'react'
 import './info.css'
-import recylce1 from '../assets/recycle.jpg'
-import recylce2 from '../assets/recycle2.svg'
-import vegan from '../assets/vegan.svg'
-import handmade from '../assets/handmade.svg'
+import recylce1 from '../../assets/recycle.jpg'
+import recylce2 from '../../assets/recycle2.svg'
+import vegan from '../../assets/vegan.svg'
+import handmade from '../../assets/handmade.svg'
 
 
 function Info() {
