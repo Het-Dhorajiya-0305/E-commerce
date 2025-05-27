@@ -8,55 +8,47 @@ const StoreContextProvider = (props) => {
 
     const [menu, setmenu] = useState("home");
     const [showmenu, setShowmenu] = useState(false);
-    const [cartIteam,setCartIteam]=useState({});
-    
-    const addToCart=async (iteamId,size)=>{
-        toast.error("product added");
-        let cartData=structuredClone(cartIteam);
-        if(cartData[iteamId])
-        {
-            if(cartData[iteamId][size])
-            {
-                cartData[iteamId][size]+=1;
-            }
-            else
-            {
-                cartData[iteamId][size]=1;
-            }
-        }
-        else
-        {
-            cartData[iteamId]={};
-            cartData[iteamId][size]=1;
-        }
+    const [cartIteam, setCartIteam] = useState({});
 
-        setCartIteam(cartData);
+    const addToCart = async (product) => {
+        toast.error("product added");
+        try {
+            if (cartIteam.find((iteam) => iteam.id === product.id)) {
+                setCartIteam([...cartIteam, cartIteam[cartIteam.find((iteam) => iteam.id === product.id)].quantity += product.quantity]);
+            }
+            else {
+                setCartIteam([...cartIteam, product]);
+            }
+        } catch (error) {
+            console.log(error);
+        }
     }
 
-    const getCartCount=()=>{
-        let totalCount=0;
-        for(const iteams in cartIteam)
-        {
-            for(const iteam in cartIteam[iteams])
-            {
+    useEffect(()=>{
+        console.log(cartIteam)
+    },[cartIteam]);
+
+    const getCartCount = () => {
+        let totalCount = 0;
+        for (const iteams in cartIteam) {
+            for (const iteam in cartIteam[iteams]) {
                 try {
-                    if(cartIteam[iteams][iteam]>0)
-                    {
-                        totalCount+=cartIteam[iteams][iteam];
+                    if (cartIteam[iteams][iteam] > 0) {
+                        totalCount += cartIteam[iteams][iteam];
                     }
                 } catch (error) {
-                    
+
                 }
             }
         }
         return totalCount;
     }
 
- 
+
 
 
     const contexValue = {
-        menu, setmenu,showmenu,setShowmenu,addToCart,cartIteam,getCartCount
+        menu, setmenu, showmenu, setShowmenu, addToCart, cartIteam, getCartCount
     }
 
     return (
