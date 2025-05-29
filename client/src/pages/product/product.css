@@ -59,28 +59,29 @@
     text-transform: capitalize;
 }
 
-.product-detail-container .product-detail .add-to-cart-increment {
+.product-detail-container .product-detail .add-to-cart {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 0px;
 }
 
-.product-detail-container .product-detail .add-to-cart-increment .increament-btn {
-    width: 40%;
-    color: #979A9B;
+.product-size .size-selector {
+    border: 1px solid rgba(84, 84, 84, 0.377);
+    border-radius: 5px;
+    width: 8rem;
+    padding: 5px 10px;
+    font-size: 19px;
+    font-family: var(--text-font);
+    color: var(--text-font);
 }
 
-.product-detail-container .product-detail .add-to-cart-increment .increament-btn .orders-count {
-    color: black;
-}
 
-
-.product-detail-container .product-detail .add-to-cart-increment .add-to-cart-btn {
+.product-detail-container .product-detail .add-to-cart .add-to-cart-btn {
     width: 50%;
 }
 
-.product-detail-container .product-detail .add-to-cart-increment .add-to-cart-btn button {
+.product-detail-container .product-detail .add-to-cart .add-to-cart-btn button {
     text-align: center;
     background-color: #6E7051;
     color: white;
@@ -93,7 +94,7 @@
     transition: all 0.5s;
 }
 
-.product-detail-container .product-detail .add-to-cart-increment .add-to-cart-btn button:hover {
+.product-detail-container .product-detail .add-to-cart .add-to-cart-btn button:hover {
     background-color: #2d2e2e;
     cursor: pointer;
 }
@@ -101,7 +102,6 @@
 @media screen and (max-width:1400px) {
     .product-main-container {
         padding: 5% 8%;
-        /* height: 100vh; */
     }
 }
 
@@ -145,23 +145,19 @@
         width: 100%;
     }
 
-    .product-detail-container .product-detail .add-to-cart-increment .increament-btn {
-        width: 20%;
+    .product-detail-container .product-detail .add-to-cart {
+        width: 60%;
     }
-    .product-detail-container .product-detail .add-to-cart-increment .add-to-cart-btn
-    {
-        width: 75%;
+
+    .product-size .size-selector {
+        font-size: 17px;
     }
 }
+
 @media screen and (max-width:800px) {
 
-
-    .product-detail-container .product-detail .add-to-cart-increment .increament-btn {
-        width: 25%;
-    }
-    .product-detail-container .product-detail .add-to-cart-increment .add-to-cart-btn
-    {
-        width: 70%;
+        .product-size .size-selector {
+        font-size: 16px;
     }
     .product-detail-container .product-detail .description {
 
@@ -169,46 +165,48 @@
 
     }
 }
+
+@media screen and (max-width:730px) {
+
+    .product-detail-container .product-detail .add-to-cart {
+        width: 75%;
+    }
+}
 @media screen and (max-width:600px) {
-
-
-    .product-detail-container .product-detail .add-to-cart-increment .increament-btn {
-        width: 30%;
+    
+    .product-detail-container .product-detail .add-to-cart {
+        width: 95%;
     }
-    .product-detail-container .product-detail .add-to-cart-increment .add-to-cart-btn
-    {
-        width: 65%;
-    }
+
     .product-detail-container .product-detail .description {
 
         font-size: 16px;
 
     }
 }
+
 @media screen and (max-width:500px) {
-
-
-    .product-detail-container .product-detail .add-to-cart-increment .increament-btn {
-        width: 40%;
+    
+    .product-detail-container .product-detail .add-to-cart {
+        width: 100%;
     }
-    .product-detail-container .product-detail .add-to-cart-increment .add-to-cart-btn
-    {
+
+    .product-detail-container .product-detail .add-to-cart .add-to-cart-btn {
         width: 55%;
     }
 }
+
 @media screen and (max-width:440px) {
-    .product-detail-container .product-detail .add-to-cart-increment
+    .product-size
     {
+        margin-bottom: 20px;
+    }
+    .product-detail-container .product-detail .add-to-cart {
         flex-direction: column;
         align-items: start;
     }
 
-    .product-detail-container .product-detail .add-to-cart-increment .increament-btn {
-        width: 50%;
-        margin-bottom: 20px;
-    }
-    .product-detail-container .product-detail .add-to-cart-increment .add-to-cart-btn
-    {
+    .product-detail-container .product-detail .add-to-cart .add-to-cart-btn {
         width: 100%;
     }
 }

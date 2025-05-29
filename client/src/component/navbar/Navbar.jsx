@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useCallback, useContext } from 'react'
 import { NavLink} from 'react-router-dom';
 import './Navbar.css'
 import { FaShoppingCart } from "react-icons/fa";
@@ -8,7 +8,7 @@ import { StoreContext } from '../../context/StoreContext';
 import { FaUserAlt } from "react-icons/fa";
 
 function  Navbar() {
-  const { menu, setmenu ,showmenu, setShowmenu,getCartCount} = useContext(StoreContext);
+  const {menu,setmenu,showmenu, setShowmenu,getCartCount} = useContext(StoreContext);
 
 
   return (

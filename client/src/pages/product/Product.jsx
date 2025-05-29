@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import React from 'react'
 import './product.css'
 import { FaRupeeSign } from "react-icons/fa";
@@ -10,30 +10,15 @@ import defaultarray from '../../component/Defaultarray';
 function Product() {
   const { pro_id, gender } = useParams();
   const {addToCart,cartItems} =useContext(StoreContext)
+  const [size,setSize]=useState("6 UK")
+
+  useEffect(()=>{
+    console.log(size)
+  },[size]);
 
   const arr=defaultarray("");
 
   const product = arr.find((item) => item.id === pro_id && item.gender === gender);
-
-  // function increamentOrder(p_id, gen) {
-  //   setCartItems((prevCart) =>
-  //     prevCart.map((item) =>
-  //       item.id === p_id && item.gender === gen
-  //         ? { ...item, quantity: item.quantity + 1 }
-  //         : item
-  //     )
-  //   );
-  // }
-
-  // function decreamentOrder(p_id, gen) {
-  //   setCartItems((prevCart) =>
-  //     prevCart.map((item) =>
-  //       item.id === p_id && item.gender === gen && item.quantity > 1
-  //         ? { ...item, quantity: item.quantity - 1 }
-  //         : item
-  //     )
-  //   );
-  // }
 
   if (!product) {
     return (
@@ -59,18 +44,20 @@ function Product() {
             <div className="description">
               {product.description}
             </div>
-            <div className="add-to-cart-increment">
-              <div className="increament-btn">
-                <div className="minus" 
-                // onClick={() => decreamentOrder(pro_id, gender)}
-                  >-</div>
-                <div className="orders-count">{product.quantity}</div>
-                <div className="plus"
-                //  onClick={() => increamentOrder(pro_id, gender)}
-                >+</div>
+            <div className="add-to-cart">
+              <div className="product-size">
+                <select className='size-selector' name="" id="" onChange={(e)=>setSize(e.target.value)}>
+                  <option value="6 UK">6 UK</option>
+                  <option value="7 UK">7 UK</option>
+                  <option value="8 UK">8 UK</option>
+                  <option value="9 UK">9 UK</option>
+                  <option value="10 UK">10 UK</option>
+                  <option value="11 UK">11 UK</option>
+                  <option value="12 UK">12 UK</option>
+                </select>
               </div>
               <div className="add-to-cart-btn">
-                <button onClick={()=>addToCart(product.id,product.quantity)}>add to cart</button>
+                <button onClick={()=>addToCart(product,size)}>add to cart</button>
               </div>
             </div>
           </div>

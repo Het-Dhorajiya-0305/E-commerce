@@ -5,50 +5,45 @@ import { toast } from "react-toastify";
 export const StoreContext = createContext(null)
 
 const StoreContextProvider = (props) => {
-
-    const [menu, setmenu] = useState("home");
+    const [menu,setmenu]=useState("home")
     const [showmenu, setShowmenu] = useState(false);
-    const [cartIteam, setCartIteam] = useState({});
+    const [cartIteam, setCartIteam] = useState([]);
 
-    const addToCart = async (product) => {
+    const addToCart = async (product, size) => {
+        product["size"] = size;
+        product["quantity"]=1;
         toast.error("product added");
         try {
-            if (cartIteam.find((iteam) => iteam.id === product.id)) {
-                setCartIteam([...cartIteam, cartIteam[cartIteam.find((iteam) => iteam.id === product.id)].quantity += product.quantity]);
+            if (cartIteam.find((iteam) => (iteam.id == product.id) && (iteam.size==product.size))) {
+                const newcartIteam=[...cartIteam];
+                const existProduct=cartIteam.find((iteam) => (iteam.id == product.id)&&(iteam.size==product.size));
+                existProduct.quantity++;
+                setCartIteam(newcartIteam);
             }
             else {
-                setCartIteam([...cartIteam, product]);
+                setCartIteam([...cartIteam, product])
             }
         } catch (error) {
             console.log(error);
         }
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         console.log(cartIteam)
-    },[cartIteam]);
+
+    }, [cartIteam]);
 
     const getCartCount = () => {
         let totalCount = 0;
         for (const iteams in cartIteam) {
-            for (const iteam in cartIteam[iteams]) {
-                try {
-                    if (cartIteam[iteams][iteam] > 0) {
-                        totalCount += cartIteam[iteams][iteam];
-                    }
-                } catch (error) {
-
-                }
-            }
+            totalCount += cartIteam[iteams].quantity;
         }
         return totalCount;
     }
 
 
-
-
     const contexValue = {
-        menu, setmenu, showmenu, setShowmenu, addToCart, cartIteam, getCartCount
+        menu,setmenu,showmenu, setShowmenu, addToCart, cartIteam, getCartCount
     }
 
     return (
